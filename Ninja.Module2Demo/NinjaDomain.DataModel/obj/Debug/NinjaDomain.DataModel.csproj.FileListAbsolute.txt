@@ -15,3 +15,4 @@ D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\N
 D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.Migrations.Initial.resources
 D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.csproj.GenerateResource.cache
 D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.Migrations.AddBirthdayToNinja.resources
+D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.Migrations.NinjaEquipmentpropertyfix.resources
