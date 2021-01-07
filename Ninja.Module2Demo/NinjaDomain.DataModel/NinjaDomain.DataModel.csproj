@@ -59,6 +59,10 @@
     <Compile Include="Migrations\202007080705479_AddBirthdayToNinja.designer.cs">
       <DependentUpon>202007080705479_AddBirthdayToNinja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101060654442_NinjaEquipment property fix.cs" />
+    <Compile Include="Migrations\202101060654442_NinjaEquipment property fix.designer.cs">
+      <DependentUpon>202101060654442_NinjaEquipment property fix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NinjaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007080705479_AddBirthdayToNinja.resx">
       <DependentUpon>202007080705479_AddBirthdayToNinja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101060654442_NinjaEquipment property fix.resx">
+      <DependentUpon>202101060654442_NinjaEquipment property fix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
