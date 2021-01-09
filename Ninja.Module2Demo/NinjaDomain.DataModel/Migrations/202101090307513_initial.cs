@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
@@ -24,6 +24,7 @@
                         Name = c.String(),
                         ServedInOniwaban = c.Boolean(nullable: false),
                         ClanId = c.Int(nullable: false),
+                        DateOfBirth = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Clans", t => t.ClanId, cascadeDelete: true)
@@ -35,23 +36,19 @@
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
+                        Type = c.Int(nullable: false),
                         Ninja_Id = c.Int(nullable: false),
-                        Type_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Ninjas", t => t.Ninja_Id, cascadeDelete: true)
-                .ForeignKey("dbo.NinjaEquipments", t => t.Type_Id)
-                .Index(t => t.Ninja_Id)
-                .Index(t => t.Type_Id);
+                .Index(t => t.Ninja_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.NinjaEquipments", "Type_Id", "dbo.NinjaEquipments");
             DropForeignKey("dbo.NinjaEquipments", "Ninja_Id", "dbo.Ninjas");
             DropForeignKey("dbo.Ninjas", "ClanId", "dbo.Clans");
-            DropIndex("dbo.NinjaEquipments", new[] { "Type_Id" });
             DropIndex("dbo.NinjaEquipments", new[] { "Ninja_Id" });
             DropIndex("dbo.Ninjas", new[] { "ClanId" });
             DropTable("dbo.NinjaEquipments");

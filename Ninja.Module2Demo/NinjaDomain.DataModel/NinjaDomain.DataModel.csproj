@@ -51,25 +51,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202007080658482_Initial.cs" />
-    <Compile Include="Migrations\202007080658482_Initial.designer.cs">
-      <DependentUpon>202007080658482_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202007080705479_AddBirthdayToNinja.cs" />
-    <Compile Include="Migrations\202007080705479_AddBirthdayToNinja.designer.cs">
-      <DependentUpon>202007080705479_AddBirthdayToNinja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202101060654442_NinjaEquipment property fix.cs" />
-    <Compile Include="Migrations\202101060654442_NinjaEquipment property fix.designer.cs">
-      <DependentUpon>202101060654442_NinjaEquipment property fix.cs</DependentUpon>
+    <Compile Include="Migrations\202101090307513_initial.cs" />
+    <Compile Include="Migrations\202101090307513_initial.designer.cs">
+      <DependentUpon>202101090307513_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NinjaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NinjaDomain.Classes\NinjaDomain.Classes.csproj">
@@ -78,14 +66,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202007080658482_Initial.resx">
-      <DependentUpon>202007080658482_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202007080705479_AddBirthdayToNinja.resx">
-      <DependentUpon>202007080705479_AddBirthdayToNinja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202101060654442_NinjaEquipment property fix.resx">
-      <DependentUpon>202101060654442_NinjaEquipment property fix.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202101090307513_initial.resx">
+      <DependentUpon>202101090307513_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

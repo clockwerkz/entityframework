@@ -4,3 +4,15 @@ D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\Nin
 D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csproj.CoreCompileInputs.cache
 D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.dll
 D:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.pdb
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.dll.config
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.dll
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\NinjaDomain.Classes.pdb
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\EntityFramework.dll
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\EntityFramework.SqlServer.dll
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\EntityFramework.xml
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\bin\Debug\EntityFramework.SqlServer.xml
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csprojAssemblyReference.cache
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csproj.CoreCompileInputs.cache
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.csproj.CopyComplete
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.dll
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.Classes\obj\Debug\NinjaDomain.Classes.pdb
