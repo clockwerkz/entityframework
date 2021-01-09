@@ -17,19 +17,36 @@ namespace ConsoleApplication
         {
             Database.SetInitializer(new NullDatabaseInitializer<NinjaContext>()); //Look this up
             //InsertNinja();
-            SimpleNinjaQueries();
+            //SimpleNinjaQueries();
+            QueryAndUpdateNinja();
+        }
+
+        private static void QueryAndUpdateNinja()
+        {
+            context.Database.Log = Console.WriteLine;
+            var ninja = context.Ninjas.FirstOrDefault();
+            ninja.ServedInOniwaban = (!ninja.ServedInOniwaban);
+
+            using (var someContext = new NinjaContext())
+            {
+                someContext.Database.Log = Console.WriteLine;
+                someContext.Ninjas.Attach(ninja);
+                someContext.Entry(ninja).State = EntityState.Modified;
+                someContext.SaveChanges();
+            }
+            
         }
 
         private static void SimpleNinjaQueries()
         {
             //Look up this use of using -> appears to be creating a block element vs using a global context variable
             var ninjas = context.Ninjas.Where(n => n.Name == "Leonardo");
-            var singleNinja = context.Ninjas.Where(n => n.DateOfBirth >= new DateTime(1985, 1, 1)).FirstOrDefault();
+            var singleNinja = context.Ninjas.Where(n => n.DateOfBirth >= new DateTime(1982, 1, 1)).FirstOrDefault();
             foreach (var ninja in ninjas)
             {
                 Console.WriteLine(ninja.Name);
             }
-            Console.WriteLine(singleNinja.Name);
+            Console.WriteLine("Born after 01/01/82: " + singleNinja.Name);
         }
 
         private static void InsertNinja()
