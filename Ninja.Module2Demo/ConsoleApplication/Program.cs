@@ -18,7 +18,57 @@ namespace ConsoleApplication
             Database.SetInitializer(new NullDatabaseInitializer<NinjaContext>()); //Look this up
             //InsertNinja();
             //SimpleNinjaQueries();
-            QueryAndUpdateNinja();
+            //QueryAndUpdateNinja();
+            //InsertNinjaWithEquipment();
+            SimpleNinjaGraph();
+        }
+
+        private static void SimpleNinjaGraph()
+        {
+            var ninja = context.Ninjas
+                .Include(n => n.EquipmentOwned)
+                .FirstOrDefault(n => n.Name.StartsWith("Baby"));
+        }
+
+        private static void InsertNinjaWithEquipment()
+        {
+            var ninja = new Ninja()
+            {
+                Name = "Baby Noah",
+                ServedInOniwaban = false,
+                DateOfBirth = new DateTime(2007, 4, 2),
+                ClanId = 1
+            };
+
+            var nunchunks = new NinjaEquipment()
+            {
+                Name = "nunchucks",
+                Type = EquipmentType.Weapon
+            };
+
+            var grapplingHook = new NinjaEquipment()
+            {
+                Name = "grappling hook",
+                Type = EquipmentType.Tool
+            };
+            context.Ninjas.Add(ninja);
+            ninja.EquipmentOwned.Add(nunchunks);
+            ninja.EquipmentOwned.Add(grapplingHook);
+            context.SaveChanges();
+        }
+
+        private static void RemoveNinja()
+        {
+            var ninja = context.Ninjas.FirstOrDefault();
+            //This works fine when the retrieval of the object and deletion action are in the same context frame
+            //context.Ninjas.Remove(ninja);
+            //context.SaveChanges();
+            using (var differentContext = new NinjaContext())
+            {
+                //This is how we can delete when we have a ninja object but in a different context state:
+                differentContext.Entry(ninja).State = EntityState.Deleted;
+                differentContext.SaveChanges();
+            }
         }
 
         private static void QueryAndUpdateNinja()
