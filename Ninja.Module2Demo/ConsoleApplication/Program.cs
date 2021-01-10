@@ -25,9 +25,18 @@ namespace ConsoleApplication
 
         private static void SimpleNinjaGraph()
         {
-            var ninja = context.Ninjas
-                .Include(n => n.EquipmentOwned)
-                .FirstOrDefault(n => n.Name.StartsWith("Baby"));
+            //Example of Eager Loading: joining a child table with the query
+            //var ninja = context.Ninjas
+                //.Include(n => n.EquipmentOwned)
+                //.FirstOrDefault(n => n.Name.StartsWith("Baby"));
+            //Example of Lazy loading
+           using (var lazyContext = new NinjaContext())
+            {
+                lazyContext.Database.Log = Console.WriteLine;
+                var ninja = lazyContext.Ninjas.FirstOrDefault(n => n.Name.StartsWith("Baby"));
+                Console.WriteLine("Ninja equipment count: {0}", ninja.EquipmentOwned.Count);
+                Console.WriteLine("Ninja equipment count: {0}", ninja.EquipmentOwned.Count);
+            }
         }
 
         private static void InsertNinjaWithEquipment()
