@@ -20,8 +20,30 @@ namespace ConsoleApplication
             //SimpleNinjaQueries();
             //QueryAndUpdateNinja();
             //InsertNinjaWithEquipment();
-            SimpleNinjaGraph();
+            //SimpleNinjaGraph();
+            //ProjectionQuery();
+            EagerLoadingNinjas();
         }
+
+        private static void EagerLoadingNinjas()
+        {
+            context.Database.Log = Console.WriteLine;
+            var ninjas = context.Ninjas.Include(n => n.EquipmentOwned).ToList();
+            foreach (var ninja in ninjas)
+            {
+                Console.WriteLine("Ninja: {0}, Equipment Count: {1}", ninja.Name, ninja.EquipmentOwned.Count);
+            }
+        }
+
+        private static void ProjectionQuery()
+        {
+            context.Database.Log = Console.WriteLine;
+            var ninjas = context.Ninjas
+                .Select(n => new { n.Name, n.DateOfBirth, n.EquipmentOwned })
+                .ToList();
+
+        }
+
 
         private static void SimpleNinjaGraph()
         {
