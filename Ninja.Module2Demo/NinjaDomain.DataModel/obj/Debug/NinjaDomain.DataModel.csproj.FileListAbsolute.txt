@@ -32,3 +32,4 @@ E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\N
 E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.pdb
 E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.Migrations.initial.resources
 E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.csproj.GenerateResource.cache
+E:\git-repos\entityframework\Ninja.Module2Demo\NinjaDomain.DataModel\obj\Debug\NinjaDomain.DataModel.Migrations.ignoringDirtyProp.resources

@@ -55,6 +55,10 @@
     <Compile Include="Migrations\202101090307513_initial.designer.cs">
       <DependentUpon>202101090307513_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101110023216_ignoringDirtyProp.cs" />
+    <Compile Include="Migrations\202101110023216_ignoringDirtyProp.designer.cs">
+      <DependentUpon>202101110023216_ignoringDirtyProp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NinjaContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101090307513_initial.resx">
       <DependentUpon>202101090307513_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101110023216_ignoringDirtyProp.resx">
+      <DependentUpon>202101110023216_ignoringDirtyProp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
